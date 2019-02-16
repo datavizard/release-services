@@ -2,7 +2,7 @@
 # See more at: https://github.com/garbas/pypi2nix
 #
 # COMMAND:
-#   pypi2nix -v -C /app/src/bugbug/data/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E blas -E gfortran -E libffi -E openssl -E pkgconfig -E freetype.dev -E libjpeg.dev -E hdf5 -s numpy -s flit -s intreehooks -s cython -s pkgconfig -e pytest-runner -e setuptools-scm -r requirements.txt -r requirements-dev.txt
+#   pypi2nix -v -C /tmp/release-services-crds8584/src/bugbug/data/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E blas -E gfortran -E libffi -E openssl -E pkgconfig -E freetype.dev -E libjpeg.dev -E hdf5 -s numpy -s flit -s intreehooks -s cython -s pkgconfig -e pytest-runner -e setuptools-scm -r requirements.txt -r requirements-dev.txt
 #
 
 { pkgs ? import <nixpkgs> {},
@@ -444,10 +444,10 @@ let
     };
 
     "boto3" = python.mkDerivation {
-      name = "boto3-1.9.94";
+      name = "boto3-1.9.96";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/61/03/faa6f7b4979811e3d06ddee25827a3fbcd37042bcaabb67df2e5a748da61/boto3-1.9.94.tar.gz";
-        sha256 = "fa81dc71b23f98abe9a90de3c42ffcd98451b29ad7408465eb7c0a63e1fba95e";
+        url = "https://files.pythonhosted.org/packages/4b/16/e3201b3bf3985c27bc526116fec6be9ac068b9eae4d8717d1301f319b708/boto3-1.9.96.tar.gz";
+        sha256 = "c103241394d396ee08548b03d5d1f0f89a7ad1dfa7ccca88a47131f329cca093";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -466,10 +466,10 @@ let
     };
 
     "botocore" = python.mkDerivation {
-      name = "botocore-1.12.94";
+      name = "botocore-1.12.96";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/dc/df/f5d03e7c452b53f00d0dfa3d639e0ed7f7386310b11b24c51698c7b9715e/botocore-1.12.94.tar.gz";
-        sha256 = "48f780477904795b0ce559b335d0aab4c3bb9efa96fbdf24c418e22ef0745e08";
+        url = "https://files.pythonhosted.org/packages/73/04/121bebe0a97f0d4f2ce84b9cb68cdfd572b6abe6753b04ed80b4cddc58a9/botocore-1.12.96.tar.gz";
+        sha256 = "55c1594041e6716847d5a8b38181e3cc44e245edbf4598ae2b99e3040073b2cf";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -492,7 +492,7 @@ let
       name = "bugbug-0.0.1";
       src = pkgs.fetchurl {
         url = "https://github.com/marco-c/bugbug/archive/34c4f06d092dea45642e7e8655f93b0337a8ca65.tar.gz";
-        sha256 = "1q2w1axkzf3rp7vjgn6m73cqv7la1zrmh5a65p4h91q7nxi297av";
+        sha256 = "5b9d2462b7078704c92d461558f30f8a9e8dd938d5d827f7b979b83fbb0a5ce0";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -1225,10 +1225,10 @@ let
     };
 
     "httplib2" = python.mkDerivation {
-      name = "httplib2-0.12.0";
+      name = "httplib2-0.12.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ce/ed/803905d670b52fa0edfdd135337e545b4496c2ab3a222f1449b7256eb99f/httplib2-0.12.0.tar.gz";
-        sha256 = "f61fb838a94ce3b349aa32c92fd8430f7e3511afdb18bf9640d647e30c90a6d6";
+        url = "https://files.pythonhosted.org/packages/75/d0/f213003c9deec99fb4f46e54580b93a3b121c487d9d6d888fc12267eb2a2/httplib2-0.12.1.tar.gz";
+        sha256 = "4ba6b8fd77d0038769bf3c33c9a96a6f752bc4cdf739701fdcaf210121f399d4";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -2226,10 +2226,10 @@ let
     };
 
     "pytest-runner" = python.mkDerivation {
-      name = "pytest-runner-4.3.1";
+      name = "pytest-runner-4.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/27/d7/45ab6de2b302e6cc307d94e9b41ebaff7b9fcf3adb5e77bdcd0e2af24e4c/pytest-runner-4.3.1.tar.gz";
-        sha256 = "526285a49f102c02198b175b3f85f5e34eb66602a5ac5c18f8a4b166863433e0";
+        url = "https://files.pythonhosted.org/packages/15/0a/1e73c3a3d3f4f5faf5eacac4e55675c1627b15d84265b80b8fef3f8a3fb5/pytest-runner-4.4.tar.gz";
+        sha256 = "00ad6cd754ce55b01b868a6d00b77161e4d2006b3918bde882376a0a884d0df4";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
