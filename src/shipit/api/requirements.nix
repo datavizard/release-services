@@ -2,7 +2,7 @@
 # See more at: https://github.com/garbas/pypi2nix
 #
 # COMMAND:
-#   pypi2nix -v -C /app/src/shipit/api/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E postgresql -s vcversioner -s pytest-runner -s setuptools-scm -s intreehooks -s flit -r requirements.txt -r requirements-dev.txt
+#   pypi2nix -v -C /tmp/release-services-em9b23ir/src/shipit/api/../../../tmp/pypi2nix -V 3.7 -O ../../../nix/requirements_override.nix -E postgresql -s vcversioner -s pytest-runner -s setuptools-scm -s intreehooks -s flit -r requirements.txt -r requirements-dev.txt
 #
 
 { pkgs ? import <nixpkgs> {},
@@ -351,10 +351,10 @@ let
     };
 
     "SQLAlchemy" = python.mkDerivation {
-      name = "SQLAlchemy-1.2.17";
+      name = "SQLAlchemy-1.2.18";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/c6/52/73d1c92944cd294a5b165097038418abb6a235f5956d43d06f97254f73bf/SQLAlchemy-1.2.17.tar.gz";
-        sha256 = "52a42dbf02d0562d6e90e7af59f177f1cc027e72833cc29c3a821eefa009c71d";
+        url = "https://files.pythonhosted.org/packages/21/ed/7eb53305b43ca51774a458d7c292f3bc7664d7a9bbb5bac4149fa34756b9/SQLAlchemy-1.2.18.tar.gz";
+        sha256 = "8027fa183f5be466030617a497b2d64e0e16c8d615e5a34bdf9fab6f66bf4723";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -474,10 +474,10 @@ let
     };
 
     "arrow" = python.mkDerivation {
-      name = "arrow-0.13.0";
+      name = "arrow-0.13.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/5d/c7/468bb95a10fb8ddb5f3f80e1aef06b78f64d6e5df958c39672f80581381f/arrow-0.13.0.tar.gz";
-        sha256 = "9cb4a910256ed536751cd5728673bfb53e6f0026e240466f90c2a92c0b79c895";
+        url = "https://files.pythonhosted.org/packages/56/7b/1131861f7f6c56551eb943df4252357e5aad4ff1310f0ddd950a0b99f4ff/arrow-0.13.1.tar.gz";
+        sha256 = "6f54d9f016c0b7811fac9fb8c2c7fa7421d80c54dbdd75ffb12913c55db60b8a";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -602,10 +602,10 @@ let
     };
 
     "boto3" = python.mkDerivation {
-      name = "boto3-1.9.92";
+      name = "boto3-1.9.96";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/70/76/3e27aa0840d4457b8aefe2c1b4934fb458fc56b930fcad693334c2e15478/boto3-1.9.92.tar.gz";
-        sha256 = "2bcda6aa7cbc51a30fc49f9129500c4df8b92fee3b4a44562c9d595bf32c4dcd";
+        url = "https://files.pythonhosted.org/packages/4b/16/e3201b3bf3985c27bc526116fec6be9ac068b9eae4d8717d1301f319b708/boto3-1.9.96.tar.gz";
+        sha256 = "c103241394d396ee08548b03d5d1f0f89a7ad1dfa7ccca88a47131f329cca093";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -624,10 +624,10 @@ let
     };
 
     "botocore" = python.mkDerivation {
-      name = "botocore-1.12.92";
+      name = "botocore-1.12.96";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/e3/12/8347627a3351d013793a30431eb33b302ee30bb6d482df23546862e0fb54/botocore-1.12.92.tar.gz";
-        sha256 = "97a43a70876dae5ebe4334db8ea846181467b80adc45f681720c9bb859491bf5";
+        url = "https://files.pythonhosted.org/packages/73/04/121bebe0a97f0d4f2ce84b9cb68cdfd572b6abe6753b04ed80b4cddc58a9/botocore-1.12.96.tar.gz";
+        sha256 = "55c1594041e6716847d5a8b38181e3cc44e245edbf4598ae2b99e3040073b2cf";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -1141,10 +1141,10 @@ let
     };
 
     "httplib2" = python.mkDerivation {
-      name = "httplib2-0.12.0";
+      name = "httplib2-0.12.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ce/ed/803905d670b52fa0edfdd135337e545b4496c2ab3a222f1449b7256eb99f/httplib2-0.12.0.tar.gz";
-        sha256 = "f61fb838a94ce3b349aa32c92fd8430f7e3511afdb18bf9640d647e30c90a6d6";
+        url = "https://files.pythonhosted.org/packages/75/d0/f213003c9deec99fb4f46e54580b93a3b121c487d9d6d888fc12267eb2a2/httplib2-0.12.1.tar.gz";
+        sha256 = "4ba6b8fd77d0038769bf3c33c9a96a6f752bc4cdf739701fdcaf210121f399d4";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -1790,10 +1790,10 @@ let
     };
 
     "pytest" = python.mkDerivation {
-      name = "pytest-4.2.0";
+      name = "pytest-4.2.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/41/f8/507d1f6121293a0392f5d0850c138d9c7dac6d22f575734078da2d0f447c/pytest-4.2.0.tar.gz";
-        sha256 = "65aeaa77ae87c7fc95de56285282546cfa9c886dc8e5dc78313db1c25e21bc07";
+        url = "https://files.pythonhosted.org/packages/46/7a/567f671971c385103c3e3470e644946f36b3fade8fd0d2e55fa890062729/pytest-4.2.1.tar.gz";
+        sha256 = "c2396a15726218a2dfef480861c4ba37bd3952ebaaa5b0fede3fc23fddcd7f8c";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -1838,10 +1838,10 @@ let
     };
 
     "pytest-runner" = python.mkDerivation {
-      name = "pytest-runner-4.2";
+      name = "pytest-runner-4.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/9e/b7/fe6e8f87f9a756fd06722216f1b6698ccba4d269eac6329d9f0c441d0f93/pytest-runner-4.2.tar.gz";
-        sha256 = "d23f117be39919f00dd91bffeb4f15e031ec797501b717a245e377aee0f577be";
+        url = "https://files.pythonhosted.org/packages/15/0a/1e73c3a3d3f4f5faf5eacac4e55675c1627b15d84265b80b8fef3f8a3fb5/pytest-runner-4.4.tar.gz";
+        sha256 = "00ad6cd754ce55b01b868a6d00b77161e4d2006b3918bde882376a0a884d0df4";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
